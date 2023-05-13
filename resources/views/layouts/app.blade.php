@@ -95,15 +95,15 @@
       <div class="collapse" id="customize-collapse" bis_skin_checked="1">
         <ul class="list-unstyled fw-normal pb-1 small">
             <li><a href="{{ route('ism') }}" class="d-inline-flex align-items-center rounded me">Маълумоти умумии исм</a></li>
-            <li><a href="/docs/5.0/customize/sass/" class="d-inline-flex align-items-center rounded me">Категорияҳои Исм</a></li>
-            <li><a href="/docs/5.0/customize/options/" class="d-inline-flex align-items-center rounded me">Исмҳои шахс ва ғайришахс</a></li>
-            <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded me">Исмхои чинс ва хос</a></li>
-            <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded me">Исмхои конкрет ва абстракт</a></li>
-            <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded me">Ифодаи чинсият дар исм</a></li>
-            <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded me">Исми мураккаб</a></li>
-            <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded me">Исмхои мураккабаи пайваст</a></li>
-            <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded me">Исмхои мураккаби тобеъ</a></li>
-            <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded me">Калимахои кутохкардашуда</a></li>
+            <li><a href="{{route('kategotiya.ism')}}" class="d-inline-flex align-items-center rounded me">Категорияҳои Исм</a></li>
+            <li><a href="{{route('ism.shahs')}}" class="d-inline-flex align-items-center rounded me">Исмҳои шахс ва ғайришахс</a></li>
+            <li><a href="{{route('ism.jins')}}" class="d-inline-flex align-items-center rounded me">Исмхои чинс ва хос</a></li>
+            <li><a href="{{route('ism.concret')}}" class="d-inline-flex align-items-center rounded me">Исмхои конкрет ва абстракт</a></li>
+            <li><a href="{{route('ifodai.jinsiyat')}}" class="d-inline-flex align-items-center rounded me">Ифодаи чинсият дар исм</a></li>
+            <li><a href="{{route('ismhoi.murakkab')}}" class="d-inline-flex align-items-center rounded me">Исми мураккаб</a></li>
+            <li><a href="{{route('ismhoi.murakkab.payvast')}}" class="d-inline-flex align-items-center rounded me">Исмхои мураккабаи пайваст</a></li>
+            <li><a href="{{route('ismhoi.murakkab.tobe')}}" class="d-inline-flex align-items-center rounded me">Исмхои мураккаби тобеъ</a></li>
+            <li><a href="{{route('kalimahoi.kutohkarda')}}" class="d-inline-flex align-items-center rounded me">Калимахои кутохкардашуда</a></li>
 
         </ul>
       </div>

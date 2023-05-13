@@ -60,6 +60,24 @@ Route::group(['prefix' => 'admin', 'middleware' => ['admin']], function () {
 // Route users show data
 
 Route::get('/ism', [MainController::class, 'ism'])->name('ism');
+Route::get('kategotiya/ism', [MainController::class, 'kategotiya_ism'])->name('kategotiya.ism');
+Route::get('ism/shahs', [MainController::class, 'ism_shahs'])->name('ism.shahs');
+Route::get('ism/jins', [MainController::class, 'ism_jins'])->name('ism.jins');
+Route::get('ism/concret', [MainController::class, 'ism_concret'])->name('ism.concret');
+Route::get('ifodai/jinsiyat', [MainController::class, 'ifodai_jinsiyat'])->name('ifodai.jinsiyat');
+Route::get('ismhoi/murakkab', [MainController::class, 'ismhoi_murakkab'])->name('ismhoi.murakkab');
+Route::get('ismhoi/murakkab/payvast', [MainController::class, 'ismhoi_murakkab_payvast'])->name('ismhoi.murakkab.payvast');
+Route::get('ismhoi/murakkab/tobe', [MainController::class, 'ismhoi_murakkab_tobe'])->name('ismhoi.murakkab.tobe');
+Route::get('kalimahoi/kutohkarda', [MainController::class, 'kalimahoi_kutohkarda'])->name('kalimahoi.kutohkarda');
+
+
+
+
+
+
+
+
+
 Route::get('/sifat', [MainController::class, 'sifat'])->name('sifat');
 Route::get('/morfologiya', [MainController::class, 'morfologiya'])->name('morfologiya');
 Route::get('/hissahoi', [MainController::class, 'hissahoi'])->name('hissahoi');
