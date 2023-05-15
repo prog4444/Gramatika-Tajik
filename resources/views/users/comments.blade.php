@@ -29,11 +29,11 @@
                             {{-- <input type="hidden" value="{{$post->id}}" name="id"> --}}
                             <div class="row">
                                 <div class="col-12">
-                                    <textarea name="body" placeholder="Message" style="    min-height: 6em; border-radius: 25px;"></textarea>
+                                    <textarea name="body" placeholder="Савол" style="    min-height: 6em; border-radius: 25px;"></textarea>
                                     {{-- <input type="hidden" value="{{$post->id}}" name="id"> --}}
                                 </div>
                                 <div class="col-12">
-                                    <input type="submit" value="Send Message" />
+                                    <input type="submit" value="Комент" />
                                 </div>
                             </div>
                         </form>

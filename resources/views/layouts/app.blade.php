@@ -26,10 +26,10 @@
                 <a class="navbar-brand font-weight-bold" style="color: orangered; font-size:20px;" href="{{ url('/') }}">
                     {{ config('', 'Zaboni Tojiki') }}
                 </a>
-                <a href="{{route('morfologiya')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px; ">Морфология</a>&nbsp;&nbsp;
-                <a href=" {{ route('hissahoi') }}" class="text-decoration-none font-weight-bold text-dark " style="font-size: 16px; " >Ҳиссаҳои нутқ</a>&nbsp;&nbsp;
-                <a href="{{ route('jumlai.murakkab')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px;">Ҷумлаи мураккаб</a>&nbsp;&nbsp;
-                <a href="{{ route('jumlai.murakkab')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px;">Ибора</a>
+                <a href="{{route('morfologiya')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px; ">Морфология</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href=" {{ route('hissahoi') }}" class="text-decoration-none font-weight-bold text-dark " style="font-size: 16px; " >Ҳиссаҳои нутқ</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{{ route('jumlai.murakkab')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px;">Ҷумлаи мураккаб</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{{ route('ibora')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px;">Ибора</a>
 
                 
 
@@ -49,13 +49,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Даромадан') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Бакайдгирӣ') }}</a>
                                 </li>
                             @endif
                         @else
@@ -115,16 +115,17 @@
     
       <div class="collapse" id="layout-collapse" bis_skin_checked="1">
         <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="{{ route('sifat') }}" class="d-inline-flex align-items-center rounded me">Сифат ва хусусиятхои граматикии он</a></li>
-            <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded me">Хелхои сифат</a></li>
-            <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded me">Сифати асли</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded me">Сифатхои нисби</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded me">Ба сифати асли гузаштани сифатхои нисби</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded me">Дараҷахои сифат</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded me">Шакли тахкидӣ дар сифат</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded me">Ифодаи ками ва хурдиву навозиш дар сифат</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded me">Калимасози дар сифат</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded me">Сифатхои нисби</a></li>
+          <li><a href="{{ route('sifat') }}" class="d-inline-flex align-items-center rounded me">Сифат</a></li>
+            <li><a href="{{ route('sifat.gramatika') }}" class="d-inline-flex align-items-center rounded me">Сифат ва хусусиятхои граматикии он</a></li>
+            <li><a href="{{ route('helhoi.sifat') }}" class="d-inline-flex align-items-center rounded me">Хелхои сифат</a></li>
+            <li><a href="{{ route('sifat.asli') }}" class="d-inline-flex align-items-center rounded me">Сифати асли</a></li>
+            <li><a href="{{ route('sifat.nisbi') }}" class="d-inline-flex align-items-center rounded me">Сифатхои нисби</a></li>
+            <li><a href="{{ route('ba.sifat.asli.gusashta') }}" class="d-inline-flex align-items-center rounded me">Ба сифати асли гузаштани сифатхои нисби</a></li>
+            <li><a href="{{ route('darajahoi.sifat') }}" class="d-inline-flex align-items-center rounded me">Дараҷахои сифат</a></li>
+            <li><a href="{{ route('shakli.takidi') }}" class="d-inline-flex align-items-center rounded me">Шакли тахкидӣ дар сифат</a></li>
+            <li><a href="{{ route('novozish.sifat') }}" class="d-inline-flex align-items-center rounded me">Ифодаи ками ва хурдиву навозиш дар сифат</a></li>
+            <li><a href="{{ route('kalimasozi.sifat') }}" class="d-inline-flex align-items-center rounded me">Калимасози дар сифат</a></li>
+           
         </ul>
       </div>
     </li>
@@ -135,10 +136,10 @@
     
       <div class="collapse" id="content-collapse" bis_skin_checked="1">
         <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/content/reboot/" class="d-inline-flex align-items-center rounded me">Сохти шуморахо</a></li>
-            <li><a href="/docs/5.0/content/typography/" class="d-inline-flex align-items-center rounded me">Хелхои шумора</a></li>
-            <li><a href="/docs/5.0/content/images/" class="d-inline-flex align-items-center rounded me">Шуморахои микдори</a></li>
-            <li><a href="/docs/5.0/content/tables/" class="d-inline-flex align-items-center rounded me">Шумораи тартиби</a></li>
+            <li><a href="{{ route('malumoti.umumi') }}" class="d-inline-flex align-items-center rounded me">Матълумоти умумй</a></li>
+            <li><a href="{{ route('khelhoi.shumora') }}" class="d-inline-flex align-items-center rounded me">Хелхои шумора</a></li>
+            <li><a href="{{ route('shumorai.tahmini') }}" class="d-inline-flex align-items-center rounded me">Шумораи тахмини</a></li>
+            <li><a href="{{ route('shumorai.tartibi') }}" class="d-inline-flex align-items-center rounded me">Шумораи тартиби</a></li>
         </ul>
       </div>
     </li>
@@ -149,16 +150,14 @@
     
       <div class="collapse" id="forms-collapse" bis_skin_checked="1">
         <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/forms/overview/" class="d-inline-flex align-items-center rounded me">Мафхуми ҷонишин</a></li>
-            <li><a href="/docs/5.0/forms/form-control/" class="d-inline-flex align-items-center rounded me ">Хелхои ҷонишин аз руи маъно</a></li>
-            <li><a href="/docs/5.0/forms/select/" class="d-inline-flex align-items-center rounded me">Ҷонишинхои шахси</a></li>
-            <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded me">Ҷонишини нафси такиди</a></li>
-            <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded me">Ҷонишинхои саволи</a></li>
-            <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded me">Ҷонишинихои ишорати</a></li>
-            <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded me">Ҷонишинхои таъминӣ</a></li>
-            <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded me">Ҷонишинхои манфӣ</a></li>
-            <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded me">Ҷонишинхои номуайянӣ</a></li>
-            <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded me">Ҷонишинхои муштарак</a></li>
+            <li><a href="{{ route('mafhumi.jonishin') }}" class="d-inline-flex align-items-center rounded me">Мафхуми ҷонишин</a></li>
+            <li><a href="{{ route('jonishin.shaksi') }}" class="d-inline-flex align-items-center rounded me">Ҷонишинхои шахси</a></li>
+            <li><a href="{{ route('jonishin.savoli') }}" class="d-inline-flex align-items-center rounded me">Ҷонишинхои саволи</a></li>
+            <li><a href="{{ route('jonishin.ishorati') }}" class="d-inline-flex align-items-center rounded me">Ҷонишинихои ишорати</a></li>
+            <li><a href="{{ route('jonishin.taini') }}" class="d-inline-flex align-items-center rounded me">Ҷонишинхои таъминӣ</a></li>
+            <li><a href="{{ route('jonishin.manfi') }}" class="d-inline-flex align-items-center rounded me">Ҷонишинхои манфӣ</a></li>
+            <li><a href="{{ route('jonishin.nomuayan') }}" class="d-inline-flex align-items-center rounded me">Ҷонишинхои номуайянӣ</a></li>
+            <li><a href="{{ route('jonishin.mushtarak') }}" class="d-inline-flex align-items-center rounded me">Ҷонишинхои муштарак</a></li>
 
 
         </ul>
@@ -172,20 +171,16 @@
     
       <div class="collapse" id="components-collapse" bis_skin_checked="1" style="">
         <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded me">Шакли тасрифӣ ва ғайритасфирии феъл</a></li>
-            <li><a href="/docs/5.0/components/alerts/" class="d-inline-flex align-items-center rounded me">Асосҳои феъл</a></li>
-            <li><a href="/docs/5.0/components/badge/" class="d-inline-flex align-items-center rounded me">Тасрифи феълхо</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Феълхои мустакил ва ёридиханда</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Феълхои модали</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Префиксхои шаклсози феъл</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Суффиксхои шаклсозии феъл</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Тарзхои феъл</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Феълхои монда ва гузаранда</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Намудхои феъл</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Сигахои феъл</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Замонахои феъл</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Префиксхои феъсоз</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded me">Суффиксхои феълсоз</a></li>
+            <li><a href="{{ route('gayritasrifi.fell') }}" class="d-inline-flex align-items-center rounded me">Шакли тасрифӣ ва ғайритасфирии феъл</a></li>
+            <li><a href="{{ route('asoshoi.fell') }}" class="d-inline-flex align-items-center rounded me">Асосҳои феъл</a></li>
+            <li><a href="{{ route('fell.mistakil.yoridihanda') }}" class="d-inline-flex align-items-center rounded me">Феълхои мустакил ва ёридиханда</a></li>
+            <li><a href="{{ route('fell.modali') }}" class="d-inline-flex align-items-center rounded me">Феълхои модали</a></li>
+            <li><a href="{{ route('prefikshoi.shaklsoz') }}" class="d-inline-flex align-items-center rounded me">Префиксхои шаклсози феъл</a></li>
+            <li><a href="{{ route('suffiks.shaklsoz') }}" class="d-inline-flex align-items-center rounded me">Суффиксхои шаклсозии феъл</a></li>
+            <li><a href="{{ route('felhoi.monda') }}" class="d-inline-flex align-items-center rounded me">Феълхои монда ва гузаранда</a></li>
+            <li><a href="{{ route('namudhoi.fell') }}" class="d-inline-flex align-items-center rounded me">Намудхои феъл</a></li>
+            <li><a href="{{ route('zamonhoi.fell') }}" class="d-inline-flex align-items-center rounded me">Замонахои феъл</a></li>
+            
 
 
      
@@ -202,20 +197,16 @@
     
       <div class="collapse" id="extend-collapse" bis_skin_checked="1">
         <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Категорияи морфологии зарф</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Гуруҳҳои зарф</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Зарфҳои тархи амал</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Сохти зарфхои хосаву ҳолат</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Сохти зарфхои мураккаб</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Зарфҳои таркиби</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Сохти зарфхои микдору дараҷа</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Зарфхои идоракунандаи</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Зарфи макон</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Зарфи замон</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Сохти зарфхои замон</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Зарфи максад</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Зарфи сабаб</a></li>
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded me">Дараҷаи қиёсии зарҳо</a></li>
+
+            <li><a href="{{ route('zarfhoi.tarzi.amal') }}" class="d-inline-flex align-items-center rounded me">Зарфҳои тархи амал</a></li>
+            <li><a href="{{ route('sohti.zarfhoi.murakkab') }}" class="d-inline-flex align-items-center rounded me">Сохти зарфхои мураккаб</a></li>
+            <li><a href="{{ route('zarfhoi.tarkibi') }}" class="d-inline-flex align-items-center rounded me">Зарфҳои таркиби</a></li>
+            <li><a href="{{ route('sohti.zarfhoi.miqdoru.daraja') }}" class="d-inline-flex align-items-center rounded me">Сохти зарфхои микдору дараҷа</a></li>
+            <li><a href="{{ route('zarfhoi.makon') }}" class="d-inline-flex align-items-center rounded me">Зарфи макон</a></li>
+            <li><a href="{{ route('zarfhoi.zamon') }}" class="d-inline-flex align-items-center rounded me">Зарфи замон</a></li>
+            <li><a href="{{ route('sohti.zarfhoi.zamon') }}" class="d-inline-flex align-items-center rounded me">Сохти зарфхои замон</a></li>
+            <li><a href="{{ route('zarfhoi.sabab') }}" class="d-inline-flex align-items-center rounded me">Зарфи сабаб</a></li>
+            <li><a href="{{ route('darajai.qiyosi.zarfho') }}" class="d-inline-flex align-items-center rounded me">Дараҷаи қиёсии зарҳо</a></li>
 
 
         </ul>
@@ -229,16 +220,16 @@
 
       <div class="collapse" id="about-collapse" bis_skin_checked="1">
         <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/about/overview/" class="d-inline-flex align-items-center rounded me">Таносуби пешояндхо дар забони  точики</a></li>
-            <li><a href="/docs/5.0/about/team/" class="d-inline-flex align-items-center rounded me">Таркиби морфологии пешояндхо</a></li>
-            <li><a href="/docs/5.0/about/brand/" class="d-inline-flex align-items-center rounded me">Вазифа ва маноҳои асосии пешояндхо</a></li>
-            <li><a href="/docs/5.0/about/license/" class="d-inline-flex align-items-center rounded me">Муносибати синонимии пешояндхои асли</a></li>
-            <li><a href="/docs/5.0/about/translations/" class="d-inline-flex align-items-center rounded me">Пешояндахои номии изофи </a></li>
-            <li><a href="/docs/5.0/about/translations/" class="d-inline-flex align-items-center rounded me">Пасояндхо</a></li>
+            <li><a href="{{ route('tanosubi.pasoyand') }}" class="d-inline-flex align-items-center rounded me">Таносуби пешояндхо дар забони  точики</a></li>
+            <li><a href="{{ route('tarkibi.morfologi.peshoyand') }}" class="d-inline-flex align-items-center rounded me">Таркиби морфологии пешояндхо</a></li>
+            <li><a href="{{ route('vazifa.va.manohoi') }}" class="d-inline-flex align-items-center rounded me">Вазифа ва маноҳои асосии пешояндхо</a></li>
+            <li><a href="{{ route('munosibati.sinonimi') }}" class="d-inline-flex align-items-center rounded me">Муносибати синонимии пешояндхои асли</a></li>
+            <li><a href="{{ route('pashoyandhoi.nomii.izofi') }}" class="d-inline-flex align-items-center rounded me">Пешояндахои номии изофи </a></li>
+            <li><a href="{{ route('pashoyandhoi.izofii.takror') }}" class="d-inline-flex align-items-center rounded me">Пасояндхо</a></li>
         </ul>
       </div>
     </li>
-    {{-- mastar --}}
+    
 
      
 
@@ -249,7 +240,7 @@
   
         <div class="collapse" id="helpers-collapse" bis_skin_checked="1">
           <ul class="list-unstyled fw-normal pb-1 small">
-              <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded me">Хели пайвандакҳо</a></li>
+              <li><a href="{{ route('heli.payvandak') }}" class="d-inline-flex align-items-center rounded me">Хели пайвандакҳо</a></li>
 
           </ul>
         </div>
@@ -262,10 +253,10 @@
   
         <div class="collapse" id="utilities-collapse" bis_skin_checked="1">
           <ul class="list-unstyled fw-normal pb-1 small">
-              <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded me">Сохти хиссачаҳо</a></li>
-              <li><a href="/docs/5.0/utilities/background/" class="d-inline-flex align-items-center rounded me">Гурухои хиссачахо</a></li>
-              <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded me">Хиссачахо ва калимахои модали</a></li>
-              <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded me">Ҳиссачахои чиҳати хиссии такид кутохкардашуда</a></li>
+              <li><a href="{{ route('sohti.hissacha') }}" class="d-inline-flex align-items-center rounded me">Сохти хиссачаҳо</a></li>
+              <li><a href="{{ route('guruhhoi.hissacha') }}" class="d-inline-flex align-items-center rounded me">Гурухои хиссачахо</a></li>
+              <li><a href="{{ route('tobishoi.modali.hissacha') }}" class="d-inline-flex align-items-center rounded me">Хиссачахо ва калимахои модали</a></li>
+              <li><a href="{{ route('hissacha.jihati.hissai.notq') }}" class="d-inline-flex align-items-center rounded me">Ҳиссачахои чиҳати хиссии такид кутохкардашуда</a></li>
 
 
           </ul>
@@ -280,10 +271,10 @@
 
         <div class="collapse show" id="getting-started-collapse" bis_skin_checked="1" style="">
           <ul class="list-unstyled fw-normal pb-1 small">
-              <li><a href="/docs/5.0/getting-started/introduction/" class="d-inline-flex align-items-center rounded me">Нидоҳои эмотсионали</a></li>
-              <li><a href="/docs/5.0/getting-started/download/" class="d-inline-flex align-items-center rounded me">Нидохои амри</a></li>
-              <li><a href="/docs/5.0/getting-started/contents/" class="d-inline-flex align-items-center rounded me">Сохти нидохо</a></li>
-              <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded me">Вазифаи синтаксисии нидоҳо</a></li>
+              <li><a href="{{ route('nidohoi.imosionali') }}" class="d-inline-flex align-items-center rounded me">Нидоҳои эмотсионали</a></li>
+              <li><a href="{{ route('nidohoi.amri') }}" class="d-inline-flex align-items-center rounded me">Нидохои амри</a></li>
+              <li><a href="{{ route('sohti.nidoho') }}" class="d-inline-flex align-items-center rounded me">Сохти нидохо</a></li>
+             
 
           </ul>
         </div>
