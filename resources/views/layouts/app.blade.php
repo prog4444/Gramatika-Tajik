@@ -23,7 +23,7 @@
   <nav class="navbar navbar-light bg-light" style=" position: fixed; z-index: 1000; top: 0;left: 0;width: 100%; background-color: #fff;">
     <div class="container-fluid">
       <a class="navbar-brand" style="margin-left: 7.8%; font-size:20px; weight:bold; padding:1px;">КАТАЛОГИ ЭЛЕКТРОНИИ АЪЗОҲОИ НУТҚИ ЗАБОНИ ТОҶИКӢ</a>
-      <form class="d-flex" action="{{ route('search') }}" method="GET">
+      <form class="d-flex" >
         <input class="form-control me-2" type="search" name="query" id="find" placeholder="Ҷустуҷу..." aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Ҷустуҷу</button>
       </form>
