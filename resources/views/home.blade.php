@@ -9,11 +9,11 @@
 
                 <!-- About Me -->
                     <section id="" class="">
-                        <div class="">
+                        <div class="" style=" ">
                           
                             
                       
-                            <h2 style="text-align: center; color:chocolate;">Хуш омадед ба саҳифаҳои сайти тоҷикӣ</h2>
+                            <h2 style="text-align: center; color:chocolate; margin-top:5%;">Хуш омадед ба саҳифаҳои сайти тоҷикӣ</h2>
 
                             <p class="text-p">Забон унсури аввалиндараҷаи фарҳанги ҳар як шахс ва дар маҷмӯъ тамоми ҷомеа мебошад. 
                                 Дар ҳаети муосир, новобаста аз он ки шахс чӣ кор мекунад, дар кадом соҳа кор мекунад е таҳсил 

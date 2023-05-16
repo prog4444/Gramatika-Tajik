@@ -152,6 +152,7 @@ Route::get('/morfologiya', [MainController::class, 'morfologiya'])->name('morfol
 Route::get('/hissahoi', [MainController::class, 'hissahoi'])->name('hissahoi');
 Route::get('/jumlai/murakkab', [MainController::class, 'jumlai_murakkab'])->name('jumlai.murakkab');
 Route::get('ibora', [MainController::class, 'ibora'])->name('ibora');
+Route::get('/search', [MainController::class, 'search'])->name('search');
 
 
 // comment users all 

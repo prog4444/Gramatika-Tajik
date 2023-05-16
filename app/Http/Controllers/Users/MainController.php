@@ -521,6 +521,16 @@ class MainController extends Controller
         $main = Posts::where('id', 71)->get();
         return view('users.ism', compact('main', 'comments'));
     }
+
+
+    public function search(Request $request)
+    {
+        $query = $request->get('query');
+        $comments = Comment::with('user')->where('parent_id',null)->where('post_id', 71)->orderByDesc('id', 'desc' )->paginate(25);
+        $main = Posts::where('title', 'LIKE', '%' . $query . '%')->get();
+
+        return view('users.sifat', compact('main', 'comments'));
+    }
      
 
     

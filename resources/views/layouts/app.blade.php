@@ -20,17 +20,27 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body class="imgd">
+  <nav class="navbar navbar-light bg-light" style=" position: fixed; z-index: 1000; top: 0;left: 0;width: 100%; background-color: #fff;">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="margin-left: 7.8%; font-size:20px; weight:bold; padding:1px;">КАТАЛОГИ ЭЛЕКТРОНИИ АЪЗОҲОИ НУТҚИ ЗАБОНИ ТОҶИКӢ</a>
+      <form class="d-flex" action="{{ route('search') }}" method="GET">
+        <input class="form-control me-2" type="search" name="query" id="find" placeholder="Ҷустуҷу..." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Ҷустуҷу</button>
+      </form>
+    </div>
+  </nav>
+  
     <div id="app" >
-        <nav class="navbar navbar-expand-md  shadow-sm "  style=" position: fixed; z-index: 1000; top: 0;left: 0;width: 100%; background: #fff;" >
+        <nav class="navbar navbar-expand-md  shadow-sm "  style=" position: fixed; z-index: 1000; top: 0;left: 0;width: 100%; background: #fff; margin-top:4%" >
             <div class="container" >
                 <a class="navbar-brand font-weight-bold" style="color: orangered; font-size:20px;" href="{{ url('/') }}">
                     {{ config('', 'Zaboni Tojiki') }}
                 </a>
+               
                 <a href="{{route('morfologiya')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px; ">Морфология</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href=" {{ route('hissahoi') }}" class="text-decoration-none font-weight-bold text-dark " style="font-size: 16px; " >Ҳиссаҳои нутқ</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="{{ route('jumlai.murakkab')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px;">Ҷумлаи мураккаб</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="{{ route('ibora')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px;">Ибора</a>
-
                 
 
                 <button style="background: content-box;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -84,8 +94,8 @@
 
 
         {{-- menu --}}
-<div class="container" >
-    <div style="width: 15%; position: fixed; top: 100px; left: 120px;  height: 100%; overflow-y: scroll;">
+<div class="container" style="" >
+    <div style="width: 15%; position: fixed; top: 100px; left: 120px;  height: 100%; overflow-y: scroll; margin-top: 2%;">
    
     <li class="mb-1">
       <button  class=" text-dark  btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false"  style="background: content-box;" >
@@ -93,7 +103,7 @@
       </button>
     
       <div class="collapse" id="customize-collapse" bis_skin_checked="1">
-        <ul class="list-unstyled fw-normal pb-1 small">
+        <ul class="list-unstyled fw-normal pb-1 small" id="list">
             <li><a href="{{ route('ism') }}" class="d-inline-flex align-items-center rounded me">Маълумоти умумии исм</a></li>
             <li><a href="{{route('kategotiya.ism')}}" class="d-inline-flex align-items-center rounded me">Категорияҳои Исм</a></li>
             <li><a href="{{route('ism.shahs')}}" class="d-inline-flex align-items-center rounded me">Исмҳои шахс ва ғайришахс</a></li>
@@ -297,8 +307,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8" style="flex: 0 0 auto;
-                width: 90%;
-                margin-left: 20rem;">
+                width:90%;
+                margin-left: 19rem;">
                     <div class="" style="margin-top:50px; margin-left:1rem;">
                         {{-- <div class="card-header">{{ __('Dashboard') }}</div> --}}
         
@@ -327,6 +337,25 @@
 </div>
 </div>
     </div>
+
+
+  <script>
+    function search() {
+    let input = document.getElementById("find");
+    let filter = input.value.toUpperCase();
+   
+ 
+    // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+    for (let i = 0; i < input.length; i++) {
+        let a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+  </script>
     
 </body>
 </html>
