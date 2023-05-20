@@ -23,7 +23,7 @@
   <nav class="navbar navbar-light bg-light" style=" position: fixed; z-index: 1000; top: 0;left: 0;width: 100%; background-color: #fff;">
     <div class="container-fluid">
       <a class="navbar-brand" style="margin-left: 7.8%; font-size:20px; weight:bold; padding:1px;">КАТАЛОГИ ЭЛЕКТРОНИИ АЪЗОҲОИ НУТҚИ ЗАБОНИ ТОҶИКӢ</a>
-      <form class="d-flex" >
+      <form class="d-flex" action="{{ route('search') }}" method="GET">
         <input class="form-control me-2" type="search" name="query" id="find" placeholder="Ҷустуҷу..." aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Ҷустуҷу</button>
       </form>
@@ -37,14 +37,12 @@
                     {{ config('', 'Zaboni Tojiki') }}
                 </a>
                
-                <a href="{{route('morfologiya')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px; ">Морфология</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href=" {{ route('hissahoi') }}" class="text-decoration-none font-weight-bold text-dark " style="font-size: 16px; " >Ҳиссаҳои нутқ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="{{ route('jumlai.murakkab')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px;">Ҷумлаи мураккаб</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="{{ route('ibora')}}" class="text-decoration-none font-weight-bold text-dark" style="font-size: 16px;">Ибора</a>
+ 
                 
 
                 <button style="background: content-box;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
+                    
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -52,7 +50,12 @@
                     <ul class="navbar-nav me-auto">
 
                     </ul>
-
+                    <div style="margin-right: 320px;">
+                      <a href="{{route('morfologiya')}}" class="text-decoration-none font-weight-bold text-dark qwer" style="font-size: 16px; ">Морфология</a>
+                      <a href=" {{ route('hissahoi') }}" class="text-decoration-none font-weight-bold text-dark qwer" style="font-size: 16px; " >Ҳиссаҳои нутқ</a>
+                      <a href="{{ route('jumlai.murakkab')}}" class="text-decoration-none font-weight-bold text-dark qwer" style="font-size: 16px;">Ҷумлаи мураккаб</a>
+                      <a href="{{ route('ibora')}}" class="text-decoration-none font-weight-bold text-dark qwer" style="font-size: 16px;">Ибора</a>
+                    </div>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
@@ -60,7 +63,9 @@
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Даромадан') }}</a>
+                                    
                                 </li>
+                              
                             @endif
 
                             @if (Route::has('register'))

@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\Users\CommentController;
 
@@ -162,8 +163,9 @@ Route::get('/comments/{id}', [CommentController::class, 'comment'])->name('comme
 Route::post('/comments/answer', [CommentController::class, 'store_answer'])->name('store.answer');
 
 
-
-
+// Route search поиск
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/search/results', [SearchController::class, 'showResults'])->name('search.results');
 
 
 
