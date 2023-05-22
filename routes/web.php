@@ -24,7 +24,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('/qwer', function () {
+    return view('qwer');
+});
 // Auth::routes();
 Route::get('/', function () {
     return view('home');
